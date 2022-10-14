@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+ 
+<h3>Como calcular bebidas para 104 adultos e 28 crianças para festa?</h3>
+ 
+<script>
+    alert("Você sabe calcular quantas bebidas por pessoa?");
+ 
+    //Quantidade pessoas - adicionanr variável que calcule a soma de pessoas facilita na escrita
+     var adulto = 104 ;
+     var crianca = 28 ;
+     var totalPessoas = adulto + crianca ;
+ 
+    //
+     document.write("O total de pessoas na festa é: "+"<u>"+"<b>"+ totalPessoas + "</b>"+"</u>" + "<br>");
+ 
+    //Criança e adulto consomem mesma quantidade de líquido no frio
+     var litroPorPessoasEmDiasFrios = (( totalPessoas * 600)/1000);
+ 
+    //Nos dias quentes os adultos consomem mais líquido.
+     var litroPorAdultoCalor = (( adulto * 1000)/1000);
+     var litroPorCriancaCalor = (( crianca * 500)/1000);
+ 
+    //Criança e adulto consomem mesma quantidade de água
+     var litroPorPessoasAgua = (( totalPessoas * 500)/1000);
+           
+    //Considerando que na festa 70% do líquido consumido é coca-cola, calculo do quanto de coca-cola é consumido dependendo da faixa etária:
+     var litroCocaFrio = ( litroPorPessoasEmDiasFrios * (70/100));
+     var litroCocaAdultoCalor = ( litroPorAdultoCalor * (70/100));
+     var litroCocaCriancaCalor = ( litroPorCriancaCalor * (70/100));
+ 
+    //Cerca de 30% é qualquer bebida
+     var litroOutrasBebidasFrio = ( litroPorPessoasEmDiasFrios * (30/100));
+     var litroOutrasBebidasAdultoCalor = ( litroPorAdultoCalor * (30/100));
+     var litroOutrasBebidasCriancaCalor = ( litroPorCriancaCalor * (30/100));
+ 
+    //Atribuir o valor certo de quantidade para cada momento, considerando as necessidades de cada faixa etária
+     document.write("A quantidade de litros de coca-cola no frio para todos os convidados é: " + "<u>" +"<b>"+ Math.round(litroCocaFrio)+"</u>" +"</b>" + " litros." + "<br>");
+   
+     document.write("A quantidade de litros de coca-cola no calor para os " + adulto + " adultos é: " + "<u>" +"<b>"+ Math.round(litroCocaAdultoCalor)+"</u>" +"</b>" + " litros." + "<br>");
+   
+     document.write("E a quantidade de litros de coca-cola para as " + crianca + " crianças no calor é: " + "<u>" +"<b>" + Math.round(litroOutrasBebidasCriancaCalor) + "</b>"+"</u>" + " litros." + "<br>");
+   
+     document.write("A quantidade de litros de sucos e(ou) outros refrigerantes no frio para todos os convidados é: " + "<u>" + "<b>" + Math.round(litroOutrasBebidasFrio)+"</u>" +"</b>" + " litros." + "<br>");
+   
+     document.write("A quantidade de litros de sucos e(ou) outros refrigerantes no calor para os " + adulto + " adultos é: " + "<u>" +"<b>"+ Math.round(litroOutrasBebidasAdultoCalor)+"</u>" +"</b>" + "litros." + "<br>");
+   
+     document.write("E a quantidade de litros de sucos e(ou) outros refrigerantes para as " + crianca + " crianças no calor é: " + "<u>" +"<b>" + Math.round(litroOutrasBebidasCriancaCalor) + "</b>"+"</u>" + " litros." + "<br>");
+   
+     document.write("A quantidade de litros de água para todos os convidados é: " + "<u>" + "<b>" + Math.round(litroPorPessoasAgua) + "</b>" + "</u>"  + " litros." + "<br>");
+ 
+</script>
+ 
+<p>
+Mais informações cliquei <a href=https://www.blogdocasamento.com.br/saiba-como-calcular-a-quantidade-de-bebida-para-sua-festa/> >>> aqui <<< </a> para saber mais informações
